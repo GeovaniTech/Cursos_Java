@@ -23,7 +23,14 @@ public class SomaController {
 
     @FXML
     void clickSoma(ActionEvent event) {
-        System.out.print("Porra cara ta de brincadeira");
+        int n1 = Integer.parseInt(textN1.getText());
+        int n2 = Integer.parseInt(txtN2.getText());
+
+        int soma = n1 + n2;
+
+        txtResult.setText("" + soma);
+
+
     }
 
 }
