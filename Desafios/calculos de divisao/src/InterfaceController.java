@@ -23,7 +23,27 @@ public class InterfaceController {
 
     @FXML
     void clickDividir(ActionEvent event) {
-        System.out.println("Apenas testando");
+        Integer numerador = Integer.parseInt(txtNumerador.getText());
+        Integer denominador = Integer.parseInt(txtDenominador.getText());
+
+        try {
+            float divisao = numerador / denominador;
+            lblResultDivisao.setText("" + divisao);
+
+            float resto = numerador % denominador;
+            lblResultResto.setText("" + resto);
+        
+        } catch (NumberFormatException e) {
+            lblResultResto.setText("0");
+            lblResultDivisao.setText("0");
+
+            System.out.println("ERRO NEGAO");
+            
+            throw e;
+        } finally {
+            System.out.println("ERRO NEGAO");
+        }
+
     }
 
 }
