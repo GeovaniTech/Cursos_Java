@@ -36,12 +36,8 @@ public class InterfaceController {
         } catch (NumberFormatException e) {
             lblResultResto.setText("0");
             lblResultDivisao.setText("0");
-
-            System.out.println("ERRO NEGAO");
             
             throw e;
-        } finally {
-            System.out.println("ERRO NEGAO");
         }
 
     }
